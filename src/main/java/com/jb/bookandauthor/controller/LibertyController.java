@@ -32,13 +32,13 @@ public class LibertyController {
     public List<Book> getBooksBetweenYears(@PathVariable int from, @PathVariable int until) {
         return libraryService.getBooksBetweenYears(from, until);
     }
-    /*If you want to use @RequestParam instead of @PathVariable
+    /*If you want to use @RequestParam instead of @PathVariable*/
     @SneakyThrows
     @GetMapping("/books") ///books?from=2000&until=2020
-    public List<Book> getBooksBetweenYears(@RequestParam("from") int from, @RequestParam("until") int until) {
+    public List<Book> getBooksBetweenYear(@RequestParam("from") int from, @RequestParam("until") int until) {
     return libraryService.getBooksBetweenYears(from, until);
 }
-     */
+    // */
 
     @SneakyThrows
     @GetMapping("/avg/{authorId}")
