@@ -1,4 +1,4 @@
-package com.jb.bookandauthor.exseptions;
+package com.jb.bookandauthor.exceptions;
 
 import lombok.Getter;
 

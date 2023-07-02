@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class InitAndrun implements CommandLineRunner {
+public class InitAndRun implements CommandLineRunner {
 
     @Autowired
     private AuthorRepository authorRepository;
@@ -47,7 +47,7 @@ public class InitAndrun implements CommandLineRunner {
         libraryService.addAuthor(a2);
         libraryService.addAuthor(a3);
         libraryService.addAuthor(a4);
-
+        System.out.println("Delete");
         //3.Delete-ok
         try {
             libraryService.deleteAuthor(2);
@@ -59,11 +59,12 @@ public class InitAndrun implements CommandLineRunner {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
+        System.out.println("Add Author that delete");
         libraryService.addAuthor(a2);
+        System.out.println("Get All Books");
         //4.All Books-ok
-        System.out.println("All books: ");
         libraryService.getAllBooks().forEach(System.out::println);
+        System.out.println("Get single author #1");
         //5.Get single author
         System.out.println("Get single author #1");
         try {
@@ -97,11 +98,13 @@ public class InitAndrun implements CommandLineRunner {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        System.out.println("Get AvgYear");
         //7.Avg Year
         System.out.println(libraryService.getAvgYear());
+        System.out.println("Get AvgYear of Author #1");
         //8.Avg Year of Author #1
         System.out.println(libraryService.getAvgYearOfAuthor(1));
-
+        System.out.println("Get AvgYear of Author #5");
         Author a5= Author.builder().name("Author5").books(null).build();
         libraryService.addAuthor(a5);
         try {

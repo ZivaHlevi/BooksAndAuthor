@@ -5,9 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
-public class ConfigSwager {
+public class ConfigRestTmp {
     @Bean
-    public RestTemplate restTemplate(){
-        return restTemplate();
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 }
+

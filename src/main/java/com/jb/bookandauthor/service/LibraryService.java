@@ -3,7 +3,7 @@ package com.jb.bookandauthor.service;
 
 import com.jb.bookandauthor.beans.Author;
 import com.jb.bookandauthor.beans.Book;
-import com.jb.bookandauthor.exseptions.LibraryCustomException;
+import com.jb.bookandauthor.exceptions.LibraryCustomException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
