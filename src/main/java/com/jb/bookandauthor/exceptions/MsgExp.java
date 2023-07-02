@@ -4,9 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum MsgExp {
-    NO_BOOKS("no books fond "),
-    ID_AUTHOR_FAILED("author not find"),
-    YEAR_FAIL("year must be greater than 0");
+    NO_BOOKS("No books found "),
+    ID_AUTHOR_FAILED("Author not found"),
+    YEAR_FAIL("Year must be greater than 0");
 
 
     private String msg;

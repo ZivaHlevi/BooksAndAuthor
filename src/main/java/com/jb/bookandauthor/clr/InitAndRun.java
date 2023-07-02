@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class Init implements CommandLineRunner {
+public class InitAndrun implements CommandLineRunner {
 
     @Autowired
     private AuthorRepository authorRepository;
